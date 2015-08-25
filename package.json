@@ -1,0 +1,25 @@
+{
+  "name": "tutor-pdfexport",
+  "version": "0.0.0",
+  "description": "Tutor's PDF export for exercises.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Welfenlab/tutor-pdfexport.git"
+  },
+  "keywords": [
+    "pdf",
+    "export",
+    "markdown",
+    "tutor"
+  ],
+  "author": "Welfenlab",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Welfenlab/tutor-pdfexport/issues"
+  },
+  "homepage": "https://github.com/Welfenlab/tutor-pdfexport#readme"
+}
