@@ -15,7 +15,7 @@ gulp.task 'bundle', ->
         transform: ['coffeeify']
         extensions: ['.coffee']
         debug: no
-        standalone: 'sketchjs'
+        standalone: 'template'
     bundler.bundle()
     .pipe source 'template.bundle.js'
     .pipe gulp.dest './scripts'

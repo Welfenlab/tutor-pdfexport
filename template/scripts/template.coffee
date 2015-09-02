@@ -14,7 +14,8 @@ proc = moreMarkdown.create 'output', processors: [
     _.template "<p style='background-color:red'><%= error %></p>")
 ]
 
-#proc.render atob "{{markdown-base64}}"
+proc.render atob "{{markdown-base64}}"
+###
 proc.render """
 # Test
 
@@ -46,3 +47,4 @@ it("should work 3", function(){throw "abc"});
 ```
 
 """
+###
