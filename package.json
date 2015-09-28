@@ -3,11 +3,8 @@
   "version": "0.1.0",
   "description": "Tutor's PDF export for exercises.",
   "main": "./lib/index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "engines":{
-    "node" : ">=0.12.0 <=0.12.7"
+  "engines": {
+    "node": ">=0.12.0 <=0.12.7"
   },
   "repository": {
     "type": "git",
@@ -33,5 +30,8 @@
     "npm": "^2.14.0",
     "os-tmpdir": "^1.0.1",
     "phantom-html-to-pdf": "^0.3.2"
+  },
+  "devDependencies": {
+    "trash": "^2.0.0"
   }
 }
