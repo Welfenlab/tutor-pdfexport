@@ -3,6 +3,9 @@
   "version": "0.1.1",
   "description": "Tutor's PDF export for exercises.",
   "main": "./lib/index.js",
+  "scripts": {
+    "test": "echo 'no tests!'"
+  },
   "engines": {
     "node": ">=0.12.0 <=0.12.7"
   },
