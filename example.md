@@ -6,14 +6,6 @@ $$ a = \frac{1}{b}$$
 console.log("eval this!");
 ```
 
-# Graphs via dot and dagreD3
-
-```dot
-digraph {
-abc -> b;
-c -> b;
-}
-```
 
 
 ```test
