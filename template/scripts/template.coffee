@@ -1,4 +1,6 @@
 _ = require 'lodash'
+$ = require 'jquery'
+scribble = require('scribble.js')($)
 
 window.renderMarkdown = (markdownBase64) ->
   defaultConfig =
@@ -20,3 +22,18 @@ window.renderMarkdown = (markdownBase64) ->
 
   MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
   MathJax.Hub.Queue -> window.PHANTOM_HTML_TO_PDF_READY = true
+
+window.renderCorrection = (correctionBase64) ->
+  shapes = JSON.parse(atob(correctionBase64))
+
+  canvas = $('#correction_highlighter')
+  canvas[0].width = window.innerWidth
+  canvas[0].height = window.innerHeight
+  scribble = canvas.scribble().scribble()
+  scribble.loadShapes(shapes.filter((s) -> s.tool == 'highlighter'))
+
+  canvas = $('#correction')
+  canvas[0].width = window.innerWidth
+  canvas[0].height = window.innerHeight
+  scribble = canvas.scribble().scribble()
+  scribble.loadShapes(shapes.filter((s) -> s.tool != 'highlighter'))

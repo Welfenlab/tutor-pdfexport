@@ -10,11 +10,14 @@
   </script>
 </head>
 <body>
+  <canvas id="correction"></canvas>
+  <canvas id="correction_highlighter"></canvas>
   <div id="output"></div>
 
   <script src="file://{dir}/scripts/template.bundle.js"></script>
   <script>
     renderMarkdown("{{markdown-base64}}");
+    renderCorrection("{{correction-base64}}");
   </script>
 </body>
 </html>

@@ -63,3 +63,16 @@ svg {
   stroke-width: 1.5px;
   fill: none;
 }
+
+#correction, #correction_highlighter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 42;
+}
+
+#correction_highlighter {
+  /*mix-blend-mode: multiply;*/
+  opacity: 0.4; /*mix-blend-mode doesn't work with phantomjs*/
+  z-index: 41;
+}
