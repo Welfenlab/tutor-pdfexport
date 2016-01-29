@@ -4,6 +4,7 @@
   "description": "Tutor's PDF export for exercises.",
   "main": "./lib/index.js",
   "scripts": {
+    "demo": "cd template && gulp && cd .. && nodejs ./lib/demo.js",
     "test": "echo 'no tests!'"
   },
   "engines": {
