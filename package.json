@@ -33,7 +33,8 @@
     "install": "^0.1.8",
     "npm": "^2.14.0",
     "os-tmpdir": "^1.0.1",
-    "phantom-html-to-pdf": "^0.3.3"
+    "phantom-html-to-pdf": "^0.3.3",
+    "phantomjs-prebuilt": "^2.1.3"
   },
   "devDependencies": {
     "trash": "^2.0.0"
