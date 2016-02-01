@@ -29,6 +29,7 @@
   "dependencies": {
     "@tutor/markdown2html": "^0.2.3",
     "MathJax-node": "^0.3.0",
+    "bluebird": "^3.1.5",
     "btoa": "^1.1.2",
     "install": "^0.1.8",
     "npm": "^2.14.0",
