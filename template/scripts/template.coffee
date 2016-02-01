@@ -1,6 +1,6 @@
 _ = require 'lodash'
 $ = require 'jquery'
-scribble = require('scribble.js')($)
+Scribble = require('scribble.js')($)
 SvgCanvas = require 'canvas2svg'
 
 window.renderMarkdown = (markdownBase64) ->
@@ -28,30 +28,14 @@ window.renderCorrection = (correctionBase64) ->
   corrections = JSON.parse(atob(correctionBase64))
 
   for shapes,i in corrections
-    canvas = $('<canvas class="highlighter"></canvas>')
-    canvas.prependTo('body')
-    canvas[0].width = window.innerWidth
-    canvas[0].height = window.innerHeight
-    scribble = canvas.scribble().scribble()
-    scribble.loadShapes(shapes.filter((s) -> s.tool == 'highlighter'))
     ctx = new SvgCanvas()
-    scribble.drawOn ctx
+    Scribble.drawShapesOn(ctx, shapes.filter((s) -> s.tool == 'highlighter'))
     svg = $(ctx.getSvg())
-    svg.prependTo('body').css(
-      'top': (i * 29.7) + 'cm' # A4 = 29.7 cm, but there's some offset
-    ).addClass('correction highlighter')
-    canvas.remove()
+    svg.css('top': (i * 29.7) + 'cm') # A4 = 29.7 cm, but there's some offset
+    $('#highlighter').prepend(svg)
 
-    canvas = $('<canvas></canvas>')
-    canvas.prependTo('body')
-    canvas[0].width = window.innerWidth
-    canvas[0].height = window.innerHeight
-    scribble = canvas.scribble().scribble()
-    scribble.loadShapes(shapes.filter((s) -> s.tool != 'highlighter'))
     ctx = new SvgCanvas()
-    scribble.drawOn ctx
+    Scribble.drawShapesOn(ctx, shapes.filter((s) -> s.tool != 'highlighter'))
     svg = $(ctx.getSvg())
-    svg.prependTo('body').css(
-      'top': (i * 29.7) + 'cm' # A4 = 29.7 cm, but there's some offset
-    ).addClass('correction')
-    canvas.remove()
+    svg.css('top': (i * 29.7) + 'cm') # A4 = 29.7 cm, but there's some offset
+    $('#correction').prepend(svg)
