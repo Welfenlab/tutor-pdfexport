@@ -75,10 +75,10 @@ pre, code {
   position: absolute;
   top: 0;
   left: 0;
+  clear: none;
 }
 
 #correction svg {
-  position: absolute;
   top: 0;
   left: 0;
   z-index: 42;
@@ -86,6 +86,8 @@ pre, code {
 }
 
 #highlighter svg {
+  top: 0;
+  left: 0;
   z-index: 41;
   stroke-opacity: 0.4;
   clear: none;
