@@ -28,7 +28,6 @@
   "homepage": "https://github.com/Welfenlab/tutor-pdfexport#readme",
   "dependencies": {
     "@tutor/markdown2html": "^0.2.3",
-    "MathJax-node": "^0.3.0",
     "bluebird": "^3.3.4",
     "btoa": "^1.1.2",
     "os-tmpdir": "^1.0.1",
