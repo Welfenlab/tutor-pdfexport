@@ -4,8 +4,7 @@
   "description": "Tutor's PDF export for exercises.",
   "main": "./lib/index.js",
   "scripts": {
-    "postinstall": "cd template && npm i",
-    "demo": "cd template && gulp && cd .. && nodejs ./lib/demo.js",
+    "demo": "nodejs ./lib/demo.js",
     "test": "echo 'no tests!'"
   },
   "engines": {
@@ -28,14 +27,13 @@
   },
   "homepage": "https://github.com/Welfenlab/tutor-pdfexport#readme",
   "dependencies": {
-    "@tutor/markdown2html": "^0.2.3",
     "bluebird": "^3.3.4",
-    "btoa": "^1.1.2",
     "os-tmpdir": "^1.0.1",
     "phantom-html-to-pdf": "^0.3.3",
     "phantomjs-prebuilt": "^2.1.5"
   },
   "devDependencies": {
+    "@tutor/pdf-template": "^1.0.0",
     "trash": "^2.0.0"
   }
 }
