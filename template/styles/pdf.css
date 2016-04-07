@@ -16,7 +16,7 @@ h1 {
 }
 
 pre, code {
-  font-family: 'inconsolataregular'; /* works like this, don't touch! */
+  font-family: 'inconsolataregular', monospace; /* works like this, don't touch! */
 }
 
 .hljs-keyword, .hljs-id, .hljs-title, .hljs-built_in, .css .hljs-tag, .hljs-doctag, .smalltalk .hljs-class, .hljs-winutils, .bash .hljs-variable, .pf .hljs-variable, .apache .hljs-tag, .hljs-type, .hljs-typename, .tex .hljs-command, .asciidoc .hljs-strong, .markdown .hljs-strong, .hljs-request, .hljs-status, .tp .hljs-data, .tp .hljs-io {
