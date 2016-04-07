@@ -1,6 +1,6 @@
 {
   "name": "@tutor/pdfexport",
-  "version": "0.5.2",
+  "version": "0.5.3",
   "description": "Tutor's PDF export for exercises.",
   "main": "./lib/index.js",
   "scripts": {
